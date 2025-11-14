@@ -4,6 +4,7 @@ import Combine
 import Charts
 #endif
 
+@MainActor
 final class PlanDashboardViewModel: ObservableObject {
     @Published private(set) var plan: MealPlan?
     @Published private(set) var tasteSummary: String = ""
@@ -105,7 +106,11 @@ struct PlanDashboardView: View {
                 }
             }
         }
+#if os(macOS)
+        .listStyle(.inset)
+#else
         .listStyle(.insetGrouped)
+#endif
     }
 
     @ViewBuilder
