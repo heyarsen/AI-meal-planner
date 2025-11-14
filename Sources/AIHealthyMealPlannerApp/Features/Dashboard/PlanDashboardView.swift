@@ -14,6 +14,7 @@ final class PlanDashboardViewModel: ObservableObject {
     private let feedbackLoop: FeedbackLoop
     private var cancellables = Set<AnyCancellable>()
 
+    @MainActor
     init(
         mealPlanStore: MealPlanStore,
         feedbackLoop: FeedbackLoop

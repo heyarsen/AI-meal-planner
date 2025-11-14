@@ -15,6 +15,7 @@ struct AIHealthyMealPlannerApp: App {
     }
 }
 
+@MainActor
 final class AppViewModel: ObservableObject {
     @Published private(set) var dependencies: AppDependencies
 

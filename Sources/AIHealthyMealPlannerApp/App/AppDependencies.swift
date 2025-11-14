@@ -1,5 +1,6 @@
 import Foundation
 
+@MainActor
 struct AppDependencies {
     let persistence: PersistenceController
     let profileStore: ProfileStore
